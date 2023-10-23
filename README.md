@@ -63,6 +63,7 @@ Figure 9
 Explanation to the Logical ERD:
 From the above logical ERD, Customer ID is the primary key for Customer table, Country Code is the primary key for Country table, Date ID is the primary key for Date table, Currency ID is the primary key for Currency table, Promotion ID is the primary key for Promotion table and Stock Code is the primary key for Product table.
 All the afore-mentioned keys are captured as foreign keys in the Sales table. The primary key to the Sales table is the invoice number.
+
 ##Fact Table
 The sales table stores the most relevant information the business wants to keep and analyze to gain insight. The sales table is the most relevant information for the business and is therefore the fact table. It has the primary keys of all the dimensions as its foreign keys and can be queried to obtain sales information with respect to all the dimensions. Thus, sales can be analyzed with respect to customer, product, country, date, or currency. Figure 10 below shows the sales fact table.
 •	Fact Table: Sales
