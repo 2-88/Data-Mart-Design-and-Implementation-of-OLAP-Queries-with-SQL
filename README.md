@@ -49,6 +49,7 @@ Promotion	Promotion ID	Unique Identifier
 Figure 8 below is the conceptual ERD of the multinational online retail store. In this ERD, 0..* represents zero to many relationship, 0..1 represents zero to one relationship, 1..* represents one to many relationship, 1..1 represents one to one relationship, *...1 represents many to one relationship and *..* represents many to many relationship.
  
 ![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(5).png)
+
 Explanation to the Conceptual ERD:
 A customer is associated with one or more sales and each sales record is for a particular customer.
 Each sale has one or more products and zero or more of a product is present in a one sales.
