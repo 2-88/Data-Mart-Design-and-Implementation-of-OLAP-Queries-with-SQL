@@ -13,15 +13,15 @@ This data mart is designed to fit the future information requirements of the mul
 |---------| ----------| ---------|
 |Sales	|Invoice Number	|Unique Identifier|
 |	|Description|	Text|
-	Price	Currency
-	Quantity	Numeric
-	Stock Code	Unique Identifier
-	Invoice Date	Date
-	Customer ID	Unique Identifier
-	Country	Text
-	Amount	Currency
-Product	Stock Code	Unique Identifier
-	Description	Text
+|	|Price|	Currency|
+|	|Quantity|	Numeric|
+|	|Stock Code|	Unique Identifier|
+|	|Invoice Date|	Date|
+|	|Customer ID|	Unique Identifier|
+|	|Country|	Text|
+|	|Amount|	Currency|
+|Product|	Stock Code|	Unique Identifier|
+	|Description|	Text|
 Date	Date ID	Unique Identifier
 	Date	Date
 	Day	Text
