@@ -1,16 +1,18 @@
 # Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL
 This work involves designing a data mart for a UK-based multinational e-commerce retail store and implementation of OLAP queries on the created data mart using Pandas SQL
-##Data Mart Design
+
+## Data Mart Design
 A data mart is a subset of a data warehouse, and it stores information that is specific to a single unit of a business. It enables teams to gain insight faster since they do not have to search for it in the data warehouse. 
 The data mart was designed based on the CRM data of the company retrieved from UCI repository website: https://archive.ics.uci.edu/dataset/502/online+retail+ii. 
 
-##Analysis of the CRMS data and identification of entities
+## Analysis of the CRMS data and identification of entities
 The CRMS data has nine columns, and they are Invoice Number, Stock Code, Description, Quantity, Invoice Date, Price, Customer ID, Country, and Amount.  This data is not sufficient to support a broader analysis to cater for the needs of a multinational online retail business as there are other useful dimensions and attributes of the existing dimensions of sales that are not captured by the CRMS.
-This data mart is designed to fit the future information requirements of the multinational online retail business as it provides a broader dimension for analyzing the business’ sales. Two new attributes were added, namely currency and promotion. Table 9 below shows the list of all the entities identified in the CRMS data and the new attributes added with their respective entity attributes and domain.
-Table 9
-Entity Name	Entity Attribute	Entity Domain
-Sales	Invoice Number	Unique Identifier
-	Description	Text
+This data mart is designed to fit the future information requirements of the multinational online retail business as it provides a broader dimension for analyzing the business’ sales. Two new attributes were added, namely currency and promotion. The table below shows the list of all the entities identified in the CRMS data and the new attributes added with their respective entity attributes and domain.
+
+|Entity Name | Entity Attribute | Entity Domain|
+|---------| ----------| ---------|
+|Sales	|Invoice Number	|Unique Identifier|
+|	|Description|	Text|
 	Price	Currency
 	Quantity	Numeric
 	Stock Code	Unique Identifier
@@ -43,7 +45,7 @@ Promotion	Promotion ID	Unique Identifier
 	Pomotion Channel	Text
 	Product Categories	Text
 
-##Conceptual ERD
+## Conceptual ERD
 Figure 8 below is the conceptual ERD of the multinational online retail store. In this ERD, 0..* represents zero to many relationship, 0..1 represents zero to one relationship, 1..* represents one to many relationship, 1..1 represents one to one relationship, *...1 represents many to one relationship and *..* represents many to many relationship.
  
 Figure 8
