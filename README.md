@@ -116,7 +116,7 @@ The sales table stores the most relevant information the business wants to keep 
 |       |Currency Conversion| This attribute describes the mechanism or formula used to convert one currency to another|
 
  
-The figure below shows the sales fact table:
+###  Sales Fact ERD:
 
 ![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(7).png)
 
