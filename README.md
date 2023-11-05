@@ -255,7 +255,7 @@ Below is the list of queries that can be support by the designed data mart
 
 8.3. Can you generate a balance sheet or income statement for a specific year or quarter?
 
-## Implementation of the data mart and visualization with Tableau
+## Implementation of the data mart and visualization of query results with Tableau
 Some of the queries listed above were answered using designed data mart with only five rows of randomly generated data that fit the data mart. The queries and outcomes are shown below:
 ### What were the total sales for a specific product category?
 #### Using the SQL query:
