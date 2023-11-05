@@ -62,7 +62,7 @@ A sale zero or more promotions and many promotions can be associated with a part
 ## Logical ERD
 The Figure below is the logical ERD for the conceptual ERD above.  “PK” denotes the primary keys and “FK” denotes the foreign keys.
  
-![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(5).png)
+![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(6).png)
 
 Explanation to the Logical ERD:
 From the above logical ERD, Customer ID is the primary key for Customer table, Country Code is the primary key for Country table, Date ID is the primary key for Date table, Currency ID is the primary key for Currency table, Promotion ID is the primary key for Promotion table and Stock Code is the primary key for Product table.
@@ -113,7 +113,7 @@ The sales table stores the most relevant information the business wants to keep 
  
 The figure below shows the sales fact table:
 
-![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(5).png)
+![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(7).png)
 
 
 
