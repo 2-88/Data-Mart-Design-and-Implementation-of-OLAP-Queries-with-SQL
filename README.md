@@ -22,28 +22,28 @@ This data mart is designed to fit the future information requirements of the mul
 |	|Amount|	Currency|
 |Product|	Stock Code|	Unique Identifier|
 	|Description|	Text|
-Date	Date ID	Unique Identifier
-	Date	Date
-	Day	Text
-	Month	Text
-	Quarter	Text
-	Year	Numeric
-Customer	Customer ID	Unique Identifier
-	Customer Name	Text
-	Customer Email	Text
-	Address	Text
-Country	Country Code	Unique Identifier
-	Country Name	Text
-Promotion	Promotion ID	Unique Identifier
-	Promotion Name	Text
-	Start Date	Date
-	End Date	Date
-	Discount Percentage	Numeric
-	Discount Percentage	Numeric
-	Promotion Type	Text
-	Target Audience	Text
-	Pomotion Channel	Text
-	Product Categories	Text
+|Date|	Date ID|	Unique Identifier|
+	|Date|	Date|
+	|Day|	Text|
+	|Month|	Text|
+	|Quarter|	Text|
+	|Year|	Numeric|
+|Customer|	Customer ID|	Unique Identifier|
+	|Customer Name|	Text|
+	|Customer Email|	Text|
+	|Address|	Text|
+|Country|	Country Code|	Unique Identifier|
+	|Country Name|	Text|
+|Promotion|	Promotion ID|	Unique Identifier|
+	|Promotion Name|	Text|
+	|Start Date|	Date|
+	|End Date|	Date|
+	|Discount Percentage|	Numeric|
+	|Discount Percentage|	Numeric|
+	|Promotion Type|	Text|
+	|Target Audience|	Text|
+	|Pomotion Channel|	Text|
+	|Product Categories|	Text|
 
 ## Conceptual ERD
 Figure 8 below is the conceptual ERD of the multinational online retail store. In this ERD, 0..* represents zero to many relationship, 0..1 represents zero to one relationship, 1..* represents one to many relationship, 1..1 represents one to one relationship, *...1 represents many to one relationship and *..* represents many to many relationship.
