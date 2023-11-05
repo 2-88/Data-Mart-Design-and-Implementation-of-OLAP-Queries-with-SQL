@@ -83,12 +83,13 @@ The sales table stores the most relevant information the business wants to keep 
 |	|Country| The country where the customer is located|
 
 	**Dimension Tables**
- |Entity Name | Entity Attribute | Entity Domain|	
-	
+ |Entity Name | Entity Attribute | Entity Domain|	  
+|---------| ----------| ---------|	
 |Product Dimension|	StockCode|A unique identifier for each product|
 |	|Description| A detailed description of the product|
-|	|Other product-related attributes as needed|
 
+ |Entity Name | Entity Attribute | Entity Domain|	
+|---------| ----------| ---------|
 |Date Dimension	|DateKey| A unique identifier for each date|
 |	|Date| The date in YYYY-MM-DD format|
 |	|Day: The day of the week (e.g., Monday, Tuesday)|
