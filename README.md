@@ -70,7 +70,8 @@ All the afore-mentioned keys are captured as foreign keys in the Sales table. Th
 
 ## Fact Table
 The sales table stores the most relevant information the business wants to keep and analyze to gain insight. The sales table is the most relevant information for the business and is therefore the fact table. It has the primary keys of all the dimensions as its foreign keys and can be queried to obtain sales information with respect to all the dimensions. Thus, sales can be analyzed with respect to customer, product, country, date, or currency. 
-        **Fact Table: Sales**
+
+   **Fact Table: Sales**
 |Entity Name | Entity Attribute | Entity Domain|	
 |---------| ----------| ---------|
 |Sales|Invoice Number|A unique identifier for each invoice|
