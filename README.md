@@ -71,7 +71,7 @@ All the afore-mentioned keys are captured as foreign keys in the Sales table. Th
 ## Fact Table
 The sales table stores the most relevant information the business wants to keep and analyze to gain insight. The sales table is the most relevant information for the business and is therefore the fact table. It has the primary keys of all the dimensions as its foreign keys and can be queried to obtain sales information with respect to all the dimensions. Thus, sales can be analyzed with respect to customer, product, country, date, or currency. 
         **Fact Table: Sales**
-|Entity Name | Entity Attribute | Meaning|	
+|Entity Name | Entity Attribute | Entity Domain|	
 |---------| ----------| ---------|
 |Sales|Invoice Number|A unique identifier for each invoice|
 |      |Description|A brief description of the purchased items|
@@ -110,6 +110,11 @@ The sales table stores the most relevant information the business wants to keep 
 |	|Target Audience| The intended audience or customer segment for the promotion. It may include values like "Best Customers," "Loyal Customers,” “Potential Customers," or other specific segments|
 |	|Promotion Channel| The marketing channel or platform through which the promotion is offered|
 |	|Product Categories| Information about the product categories or specific products included in the promotion|
+|Currency Dimension|Currency ID| A unique identifier for each currency|
+|      |Currency Name| The name of the currency, for example, "United States Dollar" , "Euro" and so on|
+|       |Currency Exchange Rate| The exchange rate of the currency, which represents how much of one currency is equivalent to another|
+|       |Currency Conversion| This attribute describes the mechanism or formula used to convert one currency to another|
+
  
 The figure below shows the sales fact table:
 
