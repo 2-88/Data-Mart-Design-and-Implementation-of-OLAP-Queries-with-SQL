@@ -125,7 +125,7 @@ The figure below shows the sales fact table:
 
 
 
-##Data Definition Language (DDL) statements to create the proposed data mart 
+## Data Definition Language (DDL) statements to create the proposed data mart 
 Below are the DDL statements to create the proposed data mart and shown in Table 10.
 
  
