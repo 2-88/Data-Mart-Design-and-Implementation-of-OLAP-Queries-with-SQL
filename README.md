@@ -71,35 +71,39 @@ All the afore-mentioned keys are captured as foreign keys in the Sales table. Th
 ## Fact Table
 The sales table stores the most relevant information the business wants to keep and analyze to gain insight. The sales table is the most relevant information for the business and is therefore the fact table. It has the primary keys of all the dimensions as its foreign keys and can be queried to obtain sales information with respect to all the dimensions. Thus, sales can be analyzed with respect to customer, product, country, date, or currency. 
         **Fact Table: Sales**
-•	Invoice Number: A unique identifier for each invoice.
-•	Description: A brief description of the purchased items.
-•	Price: The price per unit of the item.
-•	Quantity: The quantity of items purchased.
-•	StockCode: A unique identifier for each product.
-•	InvoiceDate: The date when the invoice was generated.
-•	CustomerID: A unique identifier for each customer.
-•	Country: The country where the customer is located.
-•	Dimension Tables:
-•	Product Dimension
-•	StockCode: A unique identifier for each product.
-•	Description: A detailed description of the product.
-•	Other product-related attributes as needed.
-•	Date Dimension
-•	DateKey: A unique identifier for each date.
-•	Date: The date in YYYY-MM-DD format.
-•	Day: The day of the week (e.g., Monday, Tuesday).
-•	Month: The month (e.g., January, February).
-•	Quarter: The quarter of the year.
-•	Year: The year.
-•	Customer Dimension
-•	CustomerID: A unique identifier for each customer.
-•	CustomerName: The name of the customer.
-•	CustomerEmail: The email address of the customer.
-•	Address: The customer's address.
-•	Phone Number: The customer's phone number.
-•	Country Dimension
-•	Country Code: A unique identifier for each country.
-•	Country Name: The name of the country.
+|Entity Name | Entity Attribute | Meaning|	
+|---------| ----------| ---------|
+|Sales|Invoice Number|A unique identifier for each invoice|
+|      |Description|A brief description of the purchased items|
+|     |Price: The price per unit of the item|
+|	|Quantity| The quantity of items purchased|
+|	|StockCode| A unique identifier for each product|
+|	|InvoiceDate| The date when the invoice was generated|
+|	|CustomerID| A unique identifier for each customer|
+|	|Country| The country where the customer is located|
+
+	**Dimension Tables**
+ |Entity Name | Entity Attribute | Entity Domain|	
+	
+|Product Dimension|	StockCode|A unique identifier for each product|
+|	|Description| A detailed description of the product|
+|	|Other product-related attributes as needed|
+
+|Date Dimension	|DateKey| A unique identifier for each date|
+|	|Date| The date in YYYY-MM-DD format|
+|	|Day: The day of the week (e.g., Monday, Tuesday)|
+|	|Month| The month (e.g., January, February)|
+|	|Quarter: The quarter of the year|
+|	|Year| The year|
+
+|Customer Dimension	|CustomerID| A unique identifier for each customer|
+|         |CustomerName| The name of the customer|
+|	|CustomerEmail| The email address of the customer|
+|	|Address| The customer's address|
+|	|Phone Number| The customer's phone number|
+
+|Country Dimension	|Country Code| A unique identifier for each country|
+|	|Country Name| The name of the country|
 •	Promotion Dimension
 •	Promotion ID: A unique identifier for each promotion
 •	Promotion Name: It provides the name or title of the promotion
