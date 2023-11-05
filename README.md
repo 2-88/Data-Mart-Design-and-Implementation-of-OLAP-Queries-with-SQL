@@ -82,14 +82,12 @@ The sales table stores the most relevant information the business wants to keep 
 |	|CustomerID| A unique identifier for each customer|
 |	|Country| The country where the customer is located|
 
-	**Dimension Tables**
+
+	 **Dimensions Table**
  |Entity Name | Entity Attribute | Entity Domain|	  
 |---------| ----------| ---------|	
 |Product Dimension|	StockCode|A unique identifier for each product|
 |	|Description| A detailed description of the product|
-
- |Entity Name | Entity Attribute | Entity Domain|	
-|---------| ----------| ---------|
 |Date Dimension	|DateKey| A unique identifier for each date|
 |	|Date| The date in YYYY-MM-DD format|
 |	|Day: The day of the week (e.g., Monday, Tuesday)|
@@ -102,19 +100,17 @@ The sales table stores the most relevant information the business wants to keep 
 |	|CustomerEmail| The email address of the customer|
 |	|Address| The customer's address|
 |	|Phone Number| The customer's phone number|
-
 |Country Dimension	|Country Code| A unique identifier for each country|
 |	|Country Name| The name of the country|
-•	Promotion Dimension
-•	Promotion ID: A unique identifier for each promotion
-•	Promotion Name: It provides the name or title of the promotion
-•	Start Date: Date
-•	End Date: Date
-•	Discount Percentage: The amount by which the product's price is reduced during the promotion
-•	Promotion Type: The type or category of the promotion, such as a seasonal sale, flash sale, discount code, or other promotion types.
-•	Target Audience: The intended audience or customer segment for the promotion. It may include values like "Best Customers," "Loyal Customers,” “Potential Customers," or other specific segments.
-•	Promotion Channel: The marketing channel or platform through which the promotion is offered.
-•	Product Categories: Information about the product categories or specific products included in the promotion
+|Promotion Dimension	|Promotion ID: A unique identifier for each promotion|
+|        |Promotion Name| It provides the name or title of the promotion|
+|	|Start Date| Date|
+|	|End Date| Date|
+|	|Discount Percentage| The amount by which the product's price is reduced during the promotion|
+|	|Promotion Type| The type or category of the promotion, such as a seasonal sale, flash sale, discount code, or other promotion types|
+|	|Target Audience| The intended audience or customer segment for the promotion. It may include values like "Best Customers," "Loyal Customers,” “Potential Customers," or other specific segments|
+|	|Promotion Channel| The marketing channel or platform through which the promotion is offered|
+|	|Product Categories| Information about the product categories or specific products included in the promotion|
  
 The figure below shows the sales fact table:
 
