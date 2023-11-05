@@ -94,7 +94,6 @@ The sales table stores the most relevant information the business wants to keep 
 |	|Month| The month (e.g., January, February)|
 |	|Quarter: The quarter of the year|
 |	|Year| The year|
-
 |Customer Dimension	|CustomerID| A unique identifier for each customer|
 |         |CustomerName| The name of the customer|
 |	|CustomerEmail| The email address of the customer|
@@ -102,7 +101,7 @@ The sales table stores the most relevant information the business wants to keep 
 |	|Phone Number| The customer's phone number|
 |Country Dimension	|Country Code| A unique identifier for each country|
 |	|Country Name| The name of the country|
-|Promotion Dimension	|Promotion ID: A unique identifier for each promotion|
+|Promotion Dimension	|Promotion ID| A unique identifier for each promotion|
 |        |Promotion Name| It provides the name or title of the promotion|
 |	|Start Date| Date|
 |	|End Date| Date|
