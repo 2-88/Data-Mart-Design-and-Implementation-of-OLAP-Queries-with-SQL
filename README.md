@@ -59,10 +59,10 @@ A single sale involves one currency, and one currency is used for many sales.
 Each sale is from a specific country and a country can have zero or more sales at a given time.
 A sale zero or more promotions and many promotions can be associated with a particular sale.
 
-##Logical ERD
-Figure 9 below is the logical ERD for the conceptual ERD above.  “PK” denotes the primary keys and “FK” denotes the foreign keys.
+## Logical ERD
+The Figure below is the logical ERD for the conceptual ERD above.  “PK” denotes the primary keys and “FK” denotes the foreign keys.
  
-Figure 9
+![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(5).png)
 
 Explanation to the Logical ERD:
 From the above logical ERD, Customer ID is the primary key for Customer table, Country Code is the primary key for Country table, Date ID is the primary key for Date table, Currency ID is the primary key for Currency table, Promotion ID is the primary key for Promotion table and Stock Code is the primary key for Product table.
