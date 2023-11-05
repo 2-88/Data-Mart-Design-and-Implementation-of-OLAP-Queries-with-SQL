@@ -121,17 +121,10 @@ The figure below shows the sales fact table:
 ![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(7).png)
 
 
-
-
-
-
 ## Data Definition Language (DDL) statements to create the proposed data mart 
 Below are the DDL statements to create the proposed data mart and shown in Table 10.
-
- 
-Table 10
-Fact Table	Dimensions
-CREATE TABLE Sales (
+**Fact Table	**
+### CREATE TABLE Sales (
     InvoiceNumber TEXT PRIMARY KEY,
     Description TEXT,
     Price REAL,
@@ -144,12 +137,12 @@ CREATE TABLE Sales (
     CurrencyCode INTEGER,
     Amount REAL
 );
-	CREATE TABLE Product (
+### CREATE TABLE Product (
     StockCode TEXT PRIMARY KEY,
     Description TEXT
 );
 
-	CREATE TABLE Date (
+### CREATE TABLE Date (
     DateKey INTEGER PRIMARY KEY,
     Date DATE,
     Day TEXT,
@@ -157,18 +150,18 @@ CREATE TABLE Sales (
     Quarter TEXT,
     Year INTEGER
 );
-	CREATE TABLE Customer (
+### CREATE TABLE Customer (
     CustomerID INTEGER PRIMARY KEY,
     CustomerName TEXT,
     CustomerEmail TEXT,
     Address TEXT,
     PhoneNumber TEXT
 );
-	CREATE TABLE Country (
+### CREATE TABLE Country (
     CountryCode TEXT PRIMARY KEY,
     CountryName TEXT
 );
-	CREATE TABLE Promotion (
+### CREATE TABLE Promotion (
     PromotionID INTEGER PRIMARY KEY,
     PromotionName TEXT,
     StartDate DATE,
@@ -179,7 +172,7 @@ CREATE TABLE Sales (
     PromotionChannel TEXT,
     ProductCategories TEXT
 );
-	CREATE TABLE IF NOT EXISTS Currency (
+### CREATE TABLE IF NOT EXISTS Currency (
     CurrencyID INTEGER PRIMARY KEY,
     CurrencyCode TEXT NOT NULL UNIQUE,
     CurrencyName TEXT NOT NULL,
@@ -188,7 +181,7 @@ CREATE TABLE Sales (
 );
 
  
-##Supported Queries of the Designed Data Mart
+## Supported Queries of the Designed Data Mart
 Below is the list of queries that can be support by the designed data mart
 1. Sales Analysis:
 
@@ -262,10 +255,10 @@ Below is the list of queries that can be support by the designed data mart
 
 8.3. Can you generate a balance sheet or income statement for a specific year or quarter?
 
-##Implementation of the data mart
+## Implementation of the data mart
 Some of the queries listed above were answered using designed data mart with only five rows of randomly generated data that fit the data mart. The queries and outcomes are shown below:
-•	What were the total sales for a specific product category?
-Using the SQL query:
+### What were the total sales for a specific product category?
+#### Using the SQL query:
 SELECT SUM(s.Price * s.Quantity) AS TotalSales
 FROM Sales s
 INNER JOIN Product p ON s.StockCode = p.StockCode
@@ -274,12 +267,11 @@ OR p.Description = 'Hand Warmer Union Jack'
 OR p.Description = 'White Hanging Heart T-Light Holder'
 OR p.Description = 'Hand Warmer Owl Design');
 
-The output of the query:
+#### The output of the query:
  ![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(8).png)
 
-•	Which products had the highest sales revenue in Q1 in the year 2023?
-
-Using the SQL query:
+### Which products had the highest sales revenue in Q1 in the year 2023?
+#### Using the SQL query:
 SELECT p.Description, SUM(s.Price * s.Quantity) AS TotalRevenue
 FROM Sales s
 INNER JOIN Product p ON s.StockCode = p.StockCode
@@ -288,32 +280,20 @@ WHERE d.Year = '2023'
 AND d.Quarter = 'Q1'
 GROUP BY p.Description
 ORDER BY TotalRevenue DESC;
+#### The output of the query:
+|Product Description | Total Revenue | 
+|---------| ----------| 
+|Hand Warmer Scotty Dog Design|	87.92|
+|White Hanging Heart T-Light Holder|	79.96|
+|Hand Warmer Union Jack|	31.98|
+|Hand Warmer Owl Design|	24.99|
 
-
-
-
-
-
-
-
-
-The output of the query:
-Table 11
-Product Description	Total Revenue
-Hand Warmer Scotty Dog Design	87.92
-White Hanging Heart T-Light Holder	79.96
-Hand Warmer Union Jack	31.98
-Hand Warmer Owl Design	24.99
-
-The output as shown in Table 11 above revealed that Hand Warmer Scotty Dog Design contributed the most to revenue in the first quarter and Hand Warmer Owl Design was the least contributor to revenue in the first quarter. The output is visualized in Figure 13 below.
+ ![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(9).png)
  
-Figure 11
-
-
-
-•	What are the top-selling products in each country?
-
-Using the SQL query:
+The output as above revealed that Hand Warmer Scotty Dog Design contributed the most to revenue in the first quarter and Hand Warmer Owl Design was the least contributor to revenue in the first quarter. 
+ 
+### What are the top-selling products in each country?
+#### Using the SQL query:
 SELECT
 p.Description AS ProductDescription,
 s.Country,
@@ -322,17 +302,13 @@ FROM Sales s
 INNER JOIN Product p ON s.StockCode = p.StockCode
 GROUP BY ProductDescription, Country
 ORDER BY TotalSales DESC;
+#### The output of the query:
+![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(10).png)
 
-The output of the query:
- 
-Figure 12
-The output as shown in Figure 11 above indicated that Whit Hanging Heart T- Light was the most sold product in United Kingdom. Hand Warmer Union Jack was the most sold product in Canada. Hand Warmer Scotty Dog Design was the most sold product in both Denmark and United States of America and Hand Warmer Owl Design was the most sold product in France.
+The output as shown in the figure above indicated that Whit Hanging Heart T- Light was the most sold product in United Kingdom. Hand Warmer Union Jack was the most sold product in Canada. Hand Warmer Scotty Dog Design was the most sold product in both Denmark and United States of America and Hand Warmer Owl Design was the most sold product in France.
 
-
-
-
-•	Which customers have made the most amount of purchases in January?
-Using the SQL query:
+### Which customers have made the most amount of purchases in January?
+#### Using the SQL query:
 SELECT
 c.CustomerName,
 SUM(s.Price * s.Quantity) AS TotalSalesAmount
@@ -342,16 +318,16 @@ INNER JOIN Date d ON s.InvoiceDate = d.Date
 WHERE strftime('%Y-%m', d.Date) = '2023-01'
 GROUP BY c.CustomerName
 ORDER BY TotalSalesAmount DESC;
-The output of the query:
-As shown in table 12 below, the output of the query showed that Customer C contributed the highest revenue to the business representing 79.76 of the total revenue realized in January 2023. Customer D contributed the least to the total revenue in January 2013 with 24.99. The
 
-Table 12
-Customer Name	Total Sales
-Customer C	79.96
-Customer E	54.95
-Customer A	32.97
-Customer B	31.98
-Customer D	24.99
+#### The output of the query:
+As shown below, the output of the query showed that Customer C contributed the highest revenue to the business representing 79.76 of the total revenue realized in January 2023. Customer D contributed the least to the total revenue in January 2013 with 24.99. 
 
- 
-Figure
+|Customer Name | Total Sales | 
+|---------| ----------| 
+|Customer C|	79.96|
+|Customer E|	54.95|
+|Customer A|	32.97|
+|Customer B|	31.98|
+|Customer D|	24.99|
+
+![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(11).png)
