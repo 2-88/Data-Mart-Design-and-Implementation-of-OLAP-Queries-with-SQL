@@ -82,8 +82,7 @@ The sales table stores the most relevant information the business wants to keep 
 |	|CustomerID| A unique identifier for each customer|
 |	|Country| The country where the customer is located|
 
-
-	 **Dimensions Table**
+**Dimensions Table**
  |Entity Name | Entity Attribute | Entity Domain|	  
 |---------| ----------| ---------|	
 |Product Dimension|	StockCode|A unique identifier for each product|
