@@ -275,7 +275,7 @@ OR p.Description = 'White Hanging Heart T-Light Holder'
 OR p.Description = 'Hand Warmer Owl Design');
 
 The output of the query:
- 
+ ![](https://github.com/2-88/Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL/blob/main/Screenshot%20(8).png)
 
 •	Which products had the highest sales revenue in Q1 in the year 2023?
 
