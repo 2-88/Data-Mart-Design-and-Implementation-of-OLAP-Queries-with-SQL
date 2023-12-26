@@ -122,7 +122,7 @@ The sales table stores the most relevant information the business wants to keep 
 
 
 ## Data Definition Language (DDL) statements to create the proposed data mart 
-Below are the DDL statements to create the proposed data mart and shown in Table 10.
+Below are the DDL statements to create the proposed data mart 
 **Fact Table	**
 ### CREATE TABLE Sales (
     InvoiceNumber TEXT PRIMARY KEY,
