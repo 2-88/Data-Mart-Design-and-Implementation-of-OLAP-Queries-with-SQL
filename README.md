@@ -1,4 +1,4 @@
-# Data-Mart-Design-and-Implementation-of-OLAP-Queries-with-SQL
+# Data-Mart-Design-for-an-E-Commerce-Retail-Store-and-Implementation-of-OLAP-Queries-with-SQL
 This work involves designing a data mart for a UK-based multinational e-commerce retail store and implementation of OLAP queries on the created data mart using Pandas SQL
 
 ## Data Mart Design
